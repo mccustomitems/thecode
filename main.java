@@ -1,11 +1,14 @@
 StringBuilder sourceBuilder = new StringBuilder();
-sourceBuilder.append("package com.example.beans;\n\n");
-sourceBuilder.append("import java.util.*;\n\n");
-sourceBuilder.append("public class MyBean {");
+sourceBuilder.append("{[");
+sourceBuilder.append('parent": "item/handheld_rod,"');
+sourceBuilder.append('"textures": {items/carrot_on_a_stick"');
+sourceBuilder.append('"layer0": "items/carrot_on_a_stick"');
+sourceBuilder.append('    },');
+sourceBuilder.append('    "overrides": [');
 
 for (DBField dbField:getFieldsFromDatabaseModel) {  // this DBField class is pure fiction!
   // bean attribute
-  sourceBuilder.append("{[")
+  sourceBuilder.append('        {"predicate": {"damage": 0.25},"model": "item/carrot_on_a_stick_1"},'
                .append(dbField.getType)
                .append(toFieldName(dbField.getName()))
                .append(" = null;\n");
